@@ -1,3 +1,4 @@
 # interactive-resume
-Interactive Resume of Prateek Narang
+Interactive Resume of Vins Patel
+URL: Coming soon..
 URL:  www.prateeknarang.com/
