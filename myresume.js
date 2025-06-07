@@ -23,11 +23,12 @@ var text;
 var spoj_url="http://www.spoj.com/users/prateek27/";
 var hackerearth_url="https://www.hackerearth.com/users/prateekrishu1/";
 var codechef_url="https://www.codechef.com/users/prateek27";
-var github_url="https://github.com/prateek27";
+var github_url="https://github.com/vins2804";
 var facebook_url="https://www.facebook.com/prateek.narang.756";
-var linkedin_url="https://in.linkedin.com/pub/prateek-narang/9a/8b3/10";
+var linkedin_url="https://www.linkedin.com/in/vinspatel/";
+//Yet to build
 var resume_url="http://www.prateeknarang.com/resume.pdf";
-var website_url="http://www.prateeknarang.com";
+var website_url="http://www.vinspatel.com";
 var gmail_url="";
 var inst_text;
 var bug;
@@ -62,16 +63,16 @@ function preload(){
 	game.load.image('plant1','assets/plant-lotus.png');
 	game.load.image('cloud','assets/cloud.png');
 	game.load.image('birds','assets/birds.png');
-	game.load.image('school','assets/school.png');
-	game.load.image('mainbanner','assets/interactive-resume.png');
+	game.load.image('school','assets/school_vins_resize.png');
+	game.load.image('mainbanner','assets/interactive-resume-vins.png');
 	game.load.image('building','assets/building.png');
-	game.load.image('hometown','assets/hometown.png');
+	game.load.image('hometown','assets/hometown_vins_resize.png');
 	game.load.image('hill','assets/mountain.png');
 	game.load.image('treeS','assets/tree-dark-d.png');
 	game.load.atlasJSONHash('prateek','assets/hero_running.png','assets/hero_running.json');
 	game.load.atlasJSONHash('waterAtlas','assets/water_corrected.png','assets/water_running.json');
 	game.load.atlasJSONHash('waterAtlas2','assets/water_orange.png','assets/water_running.json');
-	game.load.image('dtu','assets/dtu.png');
+	// game.load.image('dtu','assets/dtu.png');	// game.load.image('dtu','assets/dtu.png');
 	game.load.image('level','assets/sign.png');
 	game.load.image('cocotree','assets/coco.png');
 	game.load.image('python','assets/python_white.png');
@@ -85,14 +86,14 @@ function preload(){
 	game.load.image('android','assets/android.png');
 
 	game.load.image('frog','assets/frog.png');
-	game.load.image('sandiskPd','assets/sandiskPd.png');
-	game.load.image('sandiskLogo','assets/sandiskLogo.png');
-	game.load.image('instaLogo','assets/instalabs.png');
+	// game.load.image('sandiskPd','assets/sandiskPd.png');
+	// game.load.image('sandiskLogo','assets/sandiskLogo.png');
+	// game.load.image('instaLogo','assets/instalabs.png');
 	game.load.image('hackerearthLogo','assets/hackerearthlogo.png');
 	game.load.image('campk12Logo','assets/campk12.png');
-	game.load.image('cbLogo','assets/cb.png');
-	game.load.image('corel','assets/corel.png');
-	game.load.image('psbubble','assets/psbubble.png');
+	// game.load.image('cbLogo','assets/cb.png');
+	// game.load.image('corel','assets/corel.png');
+	// game.load.image('psbubble','assets/psbubble.png');
 	game.load.image('games','assets/games.png');
 	game.load.image('gamershq','assets/gamershq.png');
 	//game.load.image('photoshop','assets/pslogo.png');
@@ -199,8 +200,8 @@ function create(){
 	game.world.setBounds(0, 0,platformLength,h+800);
 
 	//Add corel parachute
-	corel = game.add.sprite(9000,h-600,'corel');
-	game.add.tween(corel).to( { y:h-450}, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 2000, true);
+	// corel = game.add.sprite(9000,h-600,'corel');
+	// game.add.tween(corel).to( { y:h-450}, 2000, Phaser.Easing.Quadratic.InOut, true, 0, 2000, true);
 	//game.input.onTap.add(moveforward,this);
 
 
@@ -304,9 +305,10 @@ function create(){
 
 
 	var style = { font: "16px monospace", fill: "#fff", align: "center" };
-	game.add.text(2930,h-250,"Class 10th \n 10.0/10.0 CGPA \n School Topper", style);
-	game.add.text(3330,h-280,"Class 12th \n 95.2 % marks \n CBSE Board ", style);
-	game.add.text(3700,h-320,"JEE Mains \n All India Rank 489 \n 13th in Punjab \n\n 1st in DTU \n(University Rank Opener)", style);
+	// game.add.text(2930,h-250,"Class 10th \n 7.0.0/10.0 CGPA \n Just Survived >_<", style);
+	game.add.text(2930,h-250,"Class 12th \n Allons Public School\n Bemetara \n CBSE Board", style);
+	game.add.text(3330,h-280,"   B.Tech. \n RSR RCET \n  Computer Science  \n Bhilai", style);
+	game.add.text(3700,h-320,"   M.Tech. \n  IIIT \n Computer Science(AI)  \n Lucknow", style);
 	//Add Ground and Grass
 	var ground = game.add.tileSprite(0,h-100,platformLength*2,2000,'ground');
 	ground.scale.setTo(0.5,0.5);
@@ -315,7 +317,7 @@ function create(){
 	grass.scale.setTo(0.5,0.5);
 	
 
-	game.add.text(5200,h-70,'*Percentiles as calculated by HackerEarth',{font:"20px monospace",fill:"#fff"});
+	// game.add.text(5200,h-70,'*Percentiles as calculated by HackerEarth',{font:"20px monospace",fill:"#fff"});
 
 
 	var water = game.add.tileSprite(8700,h-100,800,600,'waterAtlas');
@@ -415,116 +417,120 @@ function create(){
 	game.add.sprite(10000,h-330,'frog').scale.setTo(0.8,0.8);
 	game.add.sprite(10300,h-360,'frog').scale.setTo(0.9,0.9);
 	game.add.sprite(10600,h-385,'frog');
-	game.add.sprite(10900,h-450,'frog').scale.setTo(1.2,1.2);
-	game.add.sprite(11300,h-485,'frog').scale.setTo(1.3,1.3);
+	// game.add.sprite(10900,h-450,'frog').scale.setTo(1.2,1.2);
+	// game.add.sprite(11300,h-485,'frog').scale.setTo(1.3,1.3);
 
 	//Add logos
 	game.add.sprite(10010,h-210,'campk12Logo').scale.setTo(0.75,0.75);
-	game.add.sprite(10310,h-230,'instaLogo');
-	game.add.sprite(10620,h-235,'hackerearthLogo').scale.setTo(0.48,0.48);
-	game.add.sprite(10970,h-280,'sandiskLogo');
-	game.add.sprite(11320,h-300,'cbLogo').scale.setTo(0.6,0.6);
+	// game.add.sprite(10310,h-230,'instaLogo');
+	// game.add.sprite(10620,h-235,'hackerearthLogo').scale.setTo(0.48,0.48);
+	// game.add.sprite(10970,h-280,'sandiskLogo');
+	// game.add.sprite(11320,h-300,'cbLogo').scale.setTo(0.6,0.6);
 
 	//Add company texts.
 	var style_ex = {font:"16px Arial",fill:orange,align:"center"};
 	var style_exS = {font:"12px Arial",fill:orange,align:"center"};
-	game.add.text(10080,h-210,"Camp K-12, Delhi \n Sept-Oct 2013 \n Design Instructor",style_exS);
-	game.add.text(10390,h-220,"InstaLabs, Gurgaon \n June-July 2014 \n Android Developer",style_exS);
-	game.add.text(10700,h-230,"HackerEarth\n March-April 2015 \n Problem Setter",style_ex); 
-	game.add.text(11000,h-250,"Bangalore \n June-July 2015 \n Firmware Developer\n Intern",style_ex);
-	game.add.text(11420,h-290,"Coding Blocks,Delhi \n Aug'15-Nov'15 \n C++ Course Instructor",style_ex);
+	game.add.text(10080,h-210,"Wipro, Pune \n March-June 2021 \n Project Engineer",style_exS);
+	game.add.text(10390,h-220,"Intel Technologies \n June'22-May 23 \n Graduate Technical Intern",style_exS);
+	game.add.text(10700,h-230,"Intel Technologies \n Bangalore \n June'23-Present \n System Software Validation Engineer",style_ex); 
+	// game.add.text(11000,h-250,"Intel Technologies \n June'22-May 23 \n Graduate Technical Intern",style_ex);
+	// game.add.text(11420,h-290,"Intel Technologies \n Bangalore \n June'23-Present \n System Software Validation Engineer",style_ex);
 
 	var pd = game.add.sprite(10875,h-220,'sandiskPd');
 	pd.scale.setTo(1.2,1.2);
 	pd.angle = -30;
 
 	//Add projects
-	game.add.sprite(12200,h-370,'games');
-	game.add.text(12280,h-430,"Developed Web & Android Games\n 500-1000 Downloads \n Rated 4.8/5.0 on Google Play",style_white);
+	// Coming soom 
+	
+	// game.add.sprite(12200,h-370,'games');
+	// game.add.text(12280,h-430,"Developed Web & Android Games\n 500-1000 Downloads \n Rated 4.8/5.0 on Google Play",style_white);
 
-	game.add.sprite(12760,h-250,'gamershq');
-	game.add.text(12750,h-380,"Developed a gaming portal \n with frontend & backend \n to host and play games",style_white);
-
-
-	game.add.sprite(13400,h-210,'harddrive').scale.setTo(0.6,0.6);
-	game.add.sprite(13400,h-310,'bits');
-	game.add.text(13300,h-430,"Developed meta-data tracking\nstructures for large storage devices \n using Boost C++ and \n Boost Python Libraries.",style_white);
-
-	var pd = game.add.sprite(14050-100,h-160,'sandiskPd');
-	pd.scale.setTo(1.4,1.4);
-	pd.angle = 90;
-	game.add.text(13800-100,h-300,"Wrote Python Scripts to analyze \n fragmentation pattern \n on USB drives.",style_white);
-
-	game.add.sprite(14100,h-370,'hospital');
-	var ambu = game.add.sprite(14200,h-260,'ambulance');
-	ambu.scale.setTo(0.8,0.8);
-	var t = game.add.tween(ambu).to( { x:14400,}, 2000, Phaser.Easing.Back.InOut, true, 0, 2000, true);
-	t.start();
-	game.add.text(14240,h-370,"Worked in a team \nto develop Smart Hospital Management \n System for Kalpvriksh Hospital.",style_white);
+	// game.add.sprite(12760,h-250,'gamershq');
+	// game.add.text(12750,h-380,"Developed a gaming portal \n with frontend & backend \n to host and play games",style_white);
 
 
-	game.add.sprite(14800,h-420,'otherprojects');
-	game.add.text(14850,h-450,"Other Projects",style_white);
+	// game.add.sprite(13400,h-210,'harddrive').scale.setTo(0.6,0.6);
+	// game.add.sprite(13400,h-310,'bits');
+	// game.add.text(13300,h-430,"Developed meta-data tracking\nstructures for large storage devices \n using Boost C++ and \n Boost Python Libraries.",style_white);
+
+	// var pd = game.add.sprite(14050-100,h-160,'sandiskPd');
+	// pd.scale.setTo(1.4,1.4);
+	// pd.angle = 90;
+	// game.add.text(13800-100,h-300,"Wrote Python Scripts to analyze \n fragmentation pattern \n on USB drives.",style_white);
+
+	// game.add.sprite(14100,h-370,'hospital');
+	// var ambu = game.add.sprite(14200,h-260,'ambulance');
+	// ambu.scale.setTo(0.8,0.8);
+	// var t = game.add.tween(ambu).to( { x:14400,}, 2000, Phaser.Easing.Back.InOut, true, 0, 2000, true);
+	// t.start();
+	// game.add.text(14240,h-370,"Worked in a team \nto develop Smart Hospital Management \n System for Kalpvriksh Hospital.",style_white);
+
+
+	// game.add.sprite(14800,h-420,'otherprojects');
+	// game.add.text(14850,h-450,"Other Projects",style_white);
+
+
 	//Add Achivements Section
-	game.add.tileSprite(base5+500,h-100-73*3,139*2,73*3,'brick');
-	shakti = game.add.sprite(base5+1200,-500,'pshaktiman');
-	shakti.scale.setTo(0.6,0.6);
-	shakti_cup = game.add.sprite(base5+500,-500,'cup');
-	shakti_cup.scale.setTo(0.5,0.5);
-	game.add.text(base5+505,h-300,"Best Cartoonist Award \n\n Won several Dist Level\nCartooning,Painting \n & Quiz Competitions. ",style_white);
+	// game.add.tileSprite(base5+500,h-100-73*3,139*2,73*3,'brick');
+	// shakti = game.add.sprite(base5+1200,-500,'pshaktiman');
+	// shakti.scale.setTo(0.6,0.6);
+	// shakti_cup = game.add.sprite(base5+500,-500,'cup');
+	// shakti_cup.scale.setTo(0.5,0.5);
+	// game.add.text(base5+505,h-300,"Best Cartoonist Award \n\n Won several Dist Level\nCartooning,Painting \n & Quiz Competitions. ",style_white);
 	
-	//game.add.tileSprite(15720,h-300,100,300'brick');
+	// //game.add.tileSprite(15720,h-300,100,300'brick');
 
-	//game.add.sprite(15715,h-410,'best').scale.setTo(0.8,0.8);
-	//Positon style
-	var style_position = { font:"24px monospace",fill:"#fff",align:"center"};
-	cup1 = game.add.sprite(base5+820+200,-280,'cup');
-	cup1.scale.setTo(0.6,0.6);
-	game.add.sprite(base5+1190,h-330,'google');
-	game.add.text(base5+1180,h-250,"Hackathon \n 3rd Runner up\n Developed a Game\n in DART",style_position);
-
-	
-	cup2=game.add.sprite(base5+1400,-340,'cup');
-	cup2.scale.setTo(0.8,0.8);
-	game.add.sprite(base5+1630,h-390,'csi');
-	game.add.text(base5+1580,h-250,"2nd in Spython \nGame Development\n Challenge",style_position);
+	// //game.add.sprite(15715,h-410,'best').scale.setTo(0.8,0.8);
+	// //Positon style
+	// var style_position = { font:"24px monospace",fill:"#fff",align:"center"};
+	// cup1 = game.add.sprite(base5+820+200,-280,'cup');
+	// cup1.scale.setTo(0.6,0.6);
+	// game.add.sprite(base5+1190,h-330,'google');
+	// game.add.text(base5+1180,h-250,"Hackathon \n 3rd Runner up\n Developed a Game\n in DART",style_position);
 
 	
+	// cup2=game.add.sprite(base5+1400,-340,'cup');
+	// cup2.scale.setTo(0.8,0.8);
+	// game.add.sprite(base5+1630,h-390,'csi');
+	// game.add.text(base5+1580,h-250,"2nd in Spython \nGame Development\n Challenge",style_position);
 
-	cup3=game.add.sprite(base5+1820,-410,'cup');
-	game.add.sprite(base5+2060,h-410,'codelhi');
-	game.add.text(base5+2080+50,h-310,"Hackathon",style_position);
-
-	game.add.text(base5+2060,h-305+50,"1st in ",style_position);
-	game.add.sprite(base5+2170,h-310+50,'shephertz');
-	game.add.text(base5+2060,h-205+30,"1st in ",style_position);
-	game.add.sprite(base5+2150,h-210+30,'gaana').scale.setTo(0.15,0.15);
-
-
-	//Add grari
-	grari = game.add.sprite(base5+2600,h-350,'grari');
-	grari2 = game.add.sprite(base5+2520+260,h-420,'grari');
-	grari.animations.add('run');
-	grari.animations.play('run',2,true);
-	grari2.scale.setTo(0.75,0.75);
-	grari2.animations.add('run');
-	grari2.animations.play('run',2,true);
-
-	//Add digital India
-	digital_india = game.add.sprite(base5+2700,h-260,'digital_india');
-	digital_india.animations.add('run');
-	digital_india.animations.play('run',5,true);
-	game.add.text(base5+2650,h-420,"Winning Team member\n Code For India \n Google Hackathon for",{font:"30px Arial",fill:"#fff",align:"center"});
 	
-	cup4=game.add.sprite(base5+2420,-410,'cup');
 
-	cup5=game.add.sprite(base5+3000,h-400,'cup');
-	cup5=game.add.sprite(base5+3200,h-350,'building').scale.setTo(0.5,0.5);
+	// cup3=game.add.sprite(base5+1820,-410,'cup');
+	// game.add.sprite(base5+2060,h-410,'codelhi');
+	// game.add.text(base5+2080+50,h-310,"Hackathon",style_position);
+
+	// game.add.text(base5+2060,h-305+50,"1st in ",style_position);
+	// game.add.sprite(base5+2170,h-310+50,'shephertz');
+	// game.add.text(base5+2060,h-205+30,"1st in ",style_position);
+	// game.add.sprite(base5+2150,h-210+30,'gaana').scale.setTo(0.15,0.15);
+
+
+	// //Add grari
+	// grari = game.add.sprite(base5+2600,h-350,'grari');
+	// grari2 = game.add.sprite(base5+2520+260,h-420,'grari');
+	// grari.animations.add('run');
+	// grari.animations.play('run',2,true);
+	// grari2.scale.setTo(0.75,0.75);
+	// grari2.animations.add('run');
+	// grari2.animations.play('run',2,true);
+
+	// //Add digital India
+	// digital_india = game.add.sprite(base5+2700,h-260,'digital_india');
+	// digital_india.animations.add('run');
+	// digital_india.animations.play('run',5,true);
+	// game.add.text(base5+2650,h-420,"Winning Team member\n Code For India \n Google Hackathon for",{font:"30px Arial",fill:"#fff",align:"center"});
 	
-	game.add.text(base5+3250,h-470,"Winner \nSmart City Hackathon \nat PEC (Nov'15)",{font:"30px Arial",fill:"#fff",align:"center"});
+	// cup4=game.add.sprite(base5+2420,-410,'cup');
 
-	game.add.sprite(base5+3670,h-310,'icpc');
-	game.add.text(base5+3650,h-470,"Qualified for \nACM-ICPC \nChennai Regionals 2015\n(Team AIR 62) !",{font:"30px Arial",fill:"#fff",align:"center"});
+	// cup5=game.add.sprite(base5+3000,h-400,'cup');
+	// cup5=game.add.sprite(base5+3200,h-350,'building').scale.setTo(0.5,0.5);
+	
+	// game.add.text(base5+3250,h-470,"Winner \nSmart City Hackathon \nat PEC (Nov'15)",{font:"30px Arial",fill:"#fff",align:"center"});
+
+	// game.add.sprite(base5+3670,h-310,'icpc');
+	// game.add.text(base5+3650,h-470,"Qualified for \nACM-ICPC \nChennai Regionals 2015\n(Team AIR 62) !",{font:"30px Arial",fill:"#fff",align:"center"});
 
 	//Add other highlights
 	game.add.sprite(base6+600,h-240,'chai');
@@ -620,12 +626,12 @@ function create(){
 	//Add College building
 	game.add.sprite(4300,h-480,'building').scale.setTo(0.75,0.75);
 	aieee_cup=game.add.sprite(3500,-500,'cup');
-	game.add.text(4300,h-120,"  Scored 80% marks in university.",style_roboto);
+	// game.add.text(4300,h-120,"  Scored 80% marks in university.",style_roboto);
 	
 	//Add bubble
 	
 	bubble = game.add.sprite(9100,h+450,'psbubble');
-	game.add.text(8900,h+500,"Designing Skills - Photoshop,CorelDraw",style_roboto);
+	// game.add.text(8900,h+500,"Designing Skills - Photoshop,CorelDraw",style_roboto);
 	
 	bubble.scale.setTo(0.5,0.5);
 	bubble.alpha =0.8;
@@ -1326,7 +1332,7 @@ function openResume(){
 }
 
 function openGmail(){
- var win = window.open("mailto:prateeknarang111@gmail.com");
+ var win = window.open("mailto:vinspatel4@gmail.com");
  win.focus();
 }
 
