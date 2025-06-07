@@ -27,7 +27,7 @@ var github_url="https://github.com/vins2804";
 var facebook_url="https://www.facebook.com/prateek.narang.756";
 var linkedin_url="https://www.linkedin.com/in/vinspatel/";
 //Yet to build
-var resume_url="http://www.prateeknarang.com/resume.pdf";
+var resume_url="https://drive.google.com/file/d/11zLnvzZ4ee8nQdUB6wnZN2UTHetN_-WI/view?usp=sharing";
 var website_url="http://www.vinspatel.com";
 var gmail_url="";
 var inst_text;
